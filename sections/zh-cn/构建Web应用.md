@@ -78,8 +78,6 @@ function (req, res) {
 
 
 
-
-
 ## 请求方法的判断
 
 > 在Web应用中，最常见的请求方法是 GET 和 POST，除此之外，还有 HEAD、DELETE、PUT、CONNECT等方法。请求方法存在于报文的第一行的第一个单词，通常是大写。
@@ -207,8 +205,6 @@ function handleFilePath(req, res) {
   });
 }
 ```
-
-
 
 
 
