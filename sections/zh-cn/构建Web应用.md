@@ -26,12 +26,12 @@ console.log('Server running at http://127.0.0.1:3000/');
 
 
 
+**设置响应头**
+
 ```js
 // 对于浏览器中文乱码无法识别的是因为没有指定编码格式
 res.writeHead(200, { "Content-Type": "text/plain;charset=utf-8;" });
 ```
-
-
 
 当使用 response.setHeader() 设置响应头时，则与传给 response.writeHead() 的任何响应头合并，且 response.writeHead() 的优先。
 
@@ -71,8 +71,6 @@ function (req, res) {
 
 
  我们在具体业务开始前，需要为业务预处理一些细节，这些细节将会挂载在 `req` 或 `res` 对象上，供业务代码使用。
-
-
 
 
 
@@ -249,7 +247,7 @@ function (req, res) {
 }
 ```
 
-**注意：**要注意的点是，如果查询字符串中的键出现多次，那么它的值会是一个数组，如下所示：
+**注意：**如果查询字符串中的键出现多次，那么它的值会是一个数组，如下所示：
 
 ```js
 // foo=bar&foo=baz 
@@ -519,6 +517,14 @@ function (req, res) {
 Basic认证有太多的缺点，它虽然经过 `Base64` 加密后在网络中传送，但是这近乎于明文，十分危险，一般只有在 HTTPS 的情况下才会使用。不过 Basic 认证的范围十分广泛，几乎所有的浏览器都支持它。
 
 为了改进Basic认证，RFC 2069 规范提出了摘要访问认证，它加入了服务器端随机数来保护认证过程，在此不做深入的解释。
+
+
+
+```js
+// 转base64位字符串
+window.btoa("saien:123456")
+"c2FpZW46MTIzNDU2"
+```
 
 
 
@@ -823,11 +829,9 @@ function (req, res) {
 
 ### CSRF
 
-**注：**本次分享先不做这部分，后续再完善。
+**注：**本次分享先不做安全方面这部分，后续再完善。
 
 跨站请求伪造。 
-
-
 
 
 
@@ -1005,7 +1009,7 @@ function (req, res) {
   var pathname = url.parse(req.url).pathname;
   for (var i = 0; i < routes.length; i++) {
     var route = routes[i];
-    // 正则೅配
+    // 正则匹配
     if (route[0].exec(pathname)) {
       var action = route[1];
       action(req, res);
@@ -1042,7 +1046,7 @@ var pathRegexp = function(path) {
   .replace(/\/\(/g, '(?:/') 
   .replace(/(\/)?(\.)?:(\w+)(?:(\(.*?\)))?(\?)?(\*)?/g, function(_, slash, format, key, capture, 
   optional, star){ 
-  // 将೅配ڟ的॰ኵԍ存ഐઠ
+  // 将೅匹配到的键值保存起来
   keys.push(key); 
   slash = slash || ''; 
   return '' 
@@ -1118,7 +1122,7 @@ function (req, res) {
   var args = paths.slice(3);
   var module;
   try {
-    // require的缓存机制使ڥኻ有ڼᅃْ是阻塞的
+    // require的缓存机制使得只有第一次是阻塞的
     module = require("./controllers/" + controller);
   } catch (ex) {
     handle500(req, res);

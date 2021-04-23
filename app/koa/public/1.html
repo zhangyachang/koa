@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <label for="username">Username:</label> <input type="text" name="username" id="username" /> 
+  <label for="file">Filename:</label> <input type="file" name="file" id="file" />
+  <br />
+  <input type="submit" name="submit" value="Submit" />
+</form>
+    <script>
+      // Promise.resolve().then(() => {
+      //   console.log('Promise1')
+      //   setTimeout(() => {
+      //     console.log('setTimeout2')
+      //   }, 0)
+      // })
+      // setTimeout(() => {
+      //   console.log('setTimeout1')
+      //   Promise.resolve().then(() => {
+      //     console.log('Promise2')
+      //   })
+      // }, 0)
+
+      // console.log('start')
+      // setTimeout(() => {
+      //   console.log('timer1')
+      //   Promise.resolve().then(function () {
+      //     console.log('promise1')
+      //   })
+      // }, 0)
+      // setTimeout(() => {
+      //   console.log('timer2')
+      //   Promise.resolve().then(function () {
+      //     console.log('promise2')
+      //   })
+      // }, 0)
+      // Promise.resolve().then(function () {
+      //   console.log('promise3')
+      // })
+      // console.log('end')
+
+      //     const obj = {
+      //       isUseMap: {
+      //         a: 11,
+      //         b: 22
+      //       },
+      //       isUseMap2: {
+      //         c: 333,
+      //         d: 123
+      //       }
+      //     };
+
+      //     console.log('obj', obj);
+
+      //     console.log('Object.entries(obj)', Object.entries(obj))
+      //     console.log(Object.entries(obj)[0])
+
+      //     const keys = Object.keys(obj);
+      //     console.log('keys: ', keys);
+
+      //     for (let key of keys) {
+      //       console.log(obj[key])
+      //     }
+
+      // var async = function (callback) {
+      //   process.nextTick(function () {
+      //     var results = something;
+      //     if (error) {
+      //       return callback(error);
+      //     }
+      //     callback(null, results);
+      //   });
+      // };
+
+      // getQuestionPressureResult = (a1 = 4, a2 = 4, a3 = 1, a4 = 2) => {
+      //   const lc1 = [1, 2].includes(a1) ? 0 : 1;
+      //   const lc2 = [4, 5].includes(a2) ? 1 : 0;
+      //   const lc3 = a3 === 1 ? 1 : 0;
+      //   const lc4 = a3 === 3 ? 1 : 0;
+      //   const lc5 = a4 === 2 ? 1 : 0;
+      //   const lc6 = a4 === 3 ? 1 : 0;
+      //   const l = 1.5 + lc1 * ((a1 - 2) / 5) * 0.1 + lc2 * ((a2 - 3) / 2) * (-0.5) + lc3 * (-0.5) + lc4 * 0.5 + lc5 * (-0.1) + lc6 * (-0.2);
+      //   const hc1 = [1, 2].includes(a1) ? 1 : 0;
+      //   const hc2 = [4, 5].includes(a2) ? 1 : 0;
+      //   const hc3 = a3 === 3 ? 1 : 0;
+      //   const hc4 = a4 === 2 ? 1 : 0;
+      //   const hc5 = a4 === 3 ? 1 : 0;
+      //   const h = 3 + hc1 * ((3 - a2) / 2) * 0.5 - hc2 * ((a2 - 3) / 2) + hc3 * 0.5 + hc4 * (-0.1) + hc5 * (-0.2);
+      //   const L = ~~(l * 1000);
+      //   const H = ~~(h * 1000);
+      //   console.log('设置的阈值', 'L = ', L, 'H = ', H);
+      //   const PL_NONE = 'f401';
+      //   const PL_LO = L.toString(16).padStart(4, '0').match(/\w{2}/g).reverse().join('');
+      //   const PL_HI = H.toString(16).padStart(4, '0').match(/\w{2}/g).reverse().join('');
+      //   const CPVT = '3c00';
+      //   const thresholds = `${PL_NONE}${PL_LO}${PL_HI}${CPVT}`;
+      //   return thresholds;
+      // }
+
+      // const L = 1500;
+      // const H = 3000;
+      // console.log('设置的阈值', 'L = ', L, 'H = ', H);
+      // const PL_NONE = 'f401';
+      // const PL_LO = L.toString(16).padStart(4, '0').match(/\w{2}/g).reverse().join('');
+      // const PL_HI = H.toString(16).padStart(4, '0').match(/\w{2}/g).reverse().join('');
+      // const CPVT = '3c00';
+      // const thresholds = `${PL_NONE}${PL_LO}${PL_HI}${CPVT}`;
+      // console.log('thresholds: ', thresholds);
+    </script>
+  </body>
+</html>

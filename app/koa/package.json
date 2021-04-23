@@ -1,0 +1,30 @@
+{
+  "name": "koa",
+  "version": "1.0.0",
+  "description": "koa代码调试",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangyachang/koa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhangyachang/koa/issues"
+  },
+  "homepage": "https://github.com/zhangyachang/koa#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-jwt": "^4.0.1",
+    "koa-logger": "^3.2.1",
+    "koa-multer": "^1.0.2",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0"
+  }
+}

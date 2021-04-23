@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <body>
+    <button id="get">get请求</button>
+    <button id="post">post请求</button>
+    <button id="delete">delete请求</button>
+    <button id="put">put请求</button>
+
+    <div id="box"></div>
+    <script>
+      var oBox = document.getElementById("box");
+      function printResult(data) {
+        oBox.innerHTML = JSON.stringify(data);
+      }
+
+      document.getElementById("get").onclick = function () {
+        axios({
+          url: "http://127.0.0.1:3000/get?a=1&b=2",
+        })
+          .then((res) => {
+            console.log("get请求", res);
+            printResult(res);
+          })
+          .catch((err) => {
+            console.log("get请求err", err);
+          });
+      };
+
+      document.getElementById("post").onclick = function () {
+        axios({
+          url: "http://127.0.0.1:3000/post",
+          method: "POST",
+        })
+          .then((res) => {
+            console.log("post请求", res);
+            printResult(res);
+          })
+          .catch((err) => {
+            console.log("post请求err", err);
+          });
+      };
+
+      document.getElementById("delete").onclick = function () {
+        axios({
+          url: "http://127.0.0.1:3000/delete",
+          method: "DELETE",
+        })
+          .then((res) => {
+            console.log("delete请求", res);
+            printResult(res);
+          })
+          .catch((err) => {
+            console.log("delete请求err", err);
+          });
+      };
+
+      document.getElementById("put").onclick = function () {
+        axios({
+          url: "http://127.0.0.1:3000/put",
+          method: "PUT",
+        })
+          .then((res) => {
+            console.log("put请求", res);
+            printResult(res);
+          })
+          .catch((err) => {
+            console.log("put请求err", err);
+          });
+      };
+    </script>
+  </body>
+</html>
